@@ -18,3 +18,20 @@
   display: flex;
   justify-content: center;
 }
+
+.index .container {
+  width: 900px;
+  text-align: center;
+}
+
+.index ul {
+  list-style: none;
+}
+
+.index li {
+  background-color: azure;
+  width: 700px;
+  height: 70px;
+  box-shadow: gray;
+  border-radius: 6px;
+}
