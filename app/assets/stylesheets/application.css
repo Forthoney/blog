@@ -14,26 +14,57 @@
  *= require_self
  */
 
-.index {
-  display: flex;
+body {
+  background-color: #0c0c0c;
+  color: #14d80a;
+  text-shadow: 0 0 min(3px, 0.5em);
+  font-family: "Cascadia Code", "Lucida Console", monospace
 }
 
-.index .container {
+.container {
   margin-right: 200px;
   margin-left: 100px;
   width: 900px;
 }
 
-.index ul {
-  list-style: none;
+.index {
+  display: flex;
 }
 
-.index li {
-  background-color: azure;
-  width: 700px;
-  height: 70px;
-  box-shadow: 0px 2px 3px gray;
-  border-radius: 6px;
+.index ul {
+  list-style: "ㄴ";
+}
 
-  padding-left: 40px;
+input[type="text"], textarea {
+  background-color : rgb(37, 37, 37); 
+  color: whitesmoke;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+input[type="submit"] {
+  background: none;
+  border: none;
+
+  font: inherit;
+  color: inherit;
+  text-decoration-line: underline;
+}
+
+textarea[name="article[body]"] {
+  width: 500px;
+  height: 400px;
+}
+
+label {
+  font-size: 1.2em;
+}
+
+.error {
+  color: orange;
+}
+
+.article {
+  color: whitesmoke;
+  text-shadow: none;
 }
