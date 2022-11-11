@@ -27,6 +27,10 @@ body {
   width: 900px;
 }
 
+.show ul {
+  list-style: none;
+}
+
 .index {
   display: flex;
 }

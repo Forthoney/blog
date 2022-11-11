@@ -1,22 +1,24 @@
-<div class="container">
-  <%= link_to "return to home", root_path%>
-  <div class="article">
-    <h1><%= @article.title %></h1>
+<div class="show">
+  <div class="container">
+    <%= link_to "return to home", root_path%>
+    <div class="article">
+      <h1><%= @article.title %></h1>
 
-    <p><%= @article.body %></p>
+      <p><%= @article.body %></p>
+    </div>
+
+    <ul>
+      <li><%= link_to "edit", edit_article_path(@article) %></li>
+      <li><%= link_to "destroy", article_path(@article), data: {
+                        turbo_method: :delete,
+                        turbo_confirm: "Are you sure?"
+                      } %></li>
+    </ul>
+
+    <h2>Comments</h2>
+    <%= render @article.comments %>
+
+    <h3>Add a comment:</h3>
+    <%= render 'comments/form' %>
   </div>
-
-  <ul>
-    <li><%= link_to "edit", edit_article_path(@article) %></li>
-    <li><%= link_to "destroy", article_path(@article), data: {
-                      turbo_method: :delete,
-                      turbo_confirm: "Are you sure?"
-                    } %></li>
-  </ul>
-
-  <h2>Comments</h2>
-  <%= render @article.comments %>
-
-  <h3>Add a comment:</h3>
-  <%= render 'comments/form' %>
 </div>
